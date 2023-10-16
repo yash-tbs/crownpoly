@@ -1,0 +1,11 @@
+D:\MJ\CrownPoly\API\CrownPoly.API\CrownPoly.Core\bin\Debug\net6.0\CrownPoly.Core.deps.json
+D:\MJ\CrownPoly\API\CrownPoly.API\CrownPoly.Core\bin\Debug\net6.0\CrownPoly.Core.dll
+D:\MJ\CrownPoly\API\CrownPoly.API\CrownPoly.Core\bin\Debug\net6.0\CrownPoly.Core.pdb
+D:\MJ\CrownPoly\API\CrownPoly.API\CrownPoly.Core\obj\Debug\net6.0\CrownPoly.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\MJ\CrownPoly\API\CrownPoly.API\CrownPoly.Core\obj\Debug\net6.0\CrownPoly.Core.AssemblyInfoInputs.cache
+D:\MJ\CrownPoly\API\CrownPoly.API\CrownPoly.Core\obj\Debug\net6.0\CrownPoly.Core.AssemblyInfo.cs
+D:\MJ\CrownPoly\API\CrownPoly.API\CrownPoly.Core\obj\Debug\net6.0\CrownPoly.Core.csproj.CoreCompileInputs.cache
+D:\MJ\CrownPoly\API\CrownPoly.API\CrownPoly.Core\obj\Debug\net6.0\CrownPoly.Core.dll
+D:\MJ\CrownPoly\API\CrownPoly.API\CrownPoly.Core\obj\Debug\net6.0\refint\CrownPoly.Core.dll
+D:\MJ\CrownPoly\API\CrownPoly.API\CrownPoly.Core\obj\Debug\net6.0\CrownPoly.Core.pdb
+D:\MJ\CrownPoly\API\CrownPoly.API\CrownPoly.Core\obj\Debug\net6.0\ref\CrownPoly.Core.dll

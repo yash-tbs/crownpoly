@@ -1,0 +1,88 @@
+<div fxLayout="row">
+    <div fxFlex.gt-sm="100%">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>Employees</mat-card-title>
+                <mat-card-subtitle>
+                   
+                        <mat-form-field>
+                            <input matInput placeholder="Search with keyword">
+                        </mat-form-field>
+                        <button mat-raised-button color="primary" style="float: right;" [routerLink]="['../add-edit-employee']">Add Employee
+
+                        </button>
+                   
+                </mat-card-subtitle>
+                <table mat-table [dataSource]="employeeList">
+                    <ng-container matColumnDef="id">
+                        <th mat-header-cell *matHeaderCellDef [hidden]="true"> ID </th>
+                        <td mat-cell *matCellDef="let element" [hidden]="true"> {{element.id}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="firstName">
+                        <th mat-header-cell *matHeaderCellDef> Name </th>
+                        <td mat-cell *matCellDef="let element"> {{element.firstName}} {{element.middleName}}
+                            {{element.lastName}}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="middleName">
+                        <th mat-header-cell *matHeaderCellDef [hidden]="true"> Middle Name </th>
+                        <td mat-cell *matCellDef="let element" [hidden]="true"> {{element.middleName}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="lastName">
+                        <th mat-header-cell *matHeaderCellDef [hidden]="true"> Last Name </th>
+                        <td mat-cell *matCellDef="let element" [hidden]="true"> {{element.lastName}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="role">
+                        <th mat-header-cell *matHeaderCellDef> Role </th>
+                        <td mat-cell *matCellDef="let element"> {{element.role}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="dateOfBirth">
+                        <th mat-header-cell *matHeaderCellDef> Date Of Birth </th>
+                        <td mat-cell *matCellDef="let element"> {{element.dateOfBirth|date: 'dd/MM/yyyy'}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="gender">
+                        <th mat-header-cell *matHeaderCellDef> Gender </th>
+                        <td mat-cell *matCellDef="let element"> {{element.gender}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="contact">
+                        <th mat-header-cell *matHeaderCellDef> Contact </th>
+                        <td mat-cell *matCellDef="let element"> {{element.contact}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="email">
+                        <th mat-header-cell *matHeaderCellDef> Email </th>
+                        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="department">
+                        <th mat-header-cell *matHeaderCellDef> Department </th>
+                        <td mat-cell *matCellDef="let element"> {{element.department}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="reportingPerson">
+                        <th mat-header-cell *matHeaderCellDef> Reporting Person </th>
+                        <td mat-cell *matCellDef="let element"> {{element.reportingPerson}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="createdBy">
+                        <th mat-header-cell *matHeaderCellDef> Created By </th>
+                        <td mat-cell *matCellDef="let element"> {{element.createdBy}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="createdDate">
+                        <th mat-header-cell *matHeaderCellDef> Created Date </th>
+                        <td mat-cell *matCellDef="let element"> {{element.createdDate|date: 'dd/MM/yyyy'}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="Action">
+                        <th mat-header-cell *matHeaderCellDef> Action </th>
+                        <td mat-cell *matCellDef="let element" fxLayoutGap="5px">
+                            <button mat-mini-fab color="primary" class="material-icons" 
+                            (click)="getEmployeeId(element.id)"><mat-icon>edit</mat-icon>
+                                </button>
+                            <button mat-mini-fab color="warn" class="material-icons"><mat-icon>delete</mat-icon></button>
+                        </td>
+                    </ng-container>
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+                </table>
+                <mat-paginator #paginator [pageSizeOptions]="[2, 4, 6]" showFirstLastButtons></mat-paginator>
+            </mat-card-content>
+        </mat-card>
+    </div>
