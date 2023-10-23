@@ -3,8 +3,6 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/authentication/auth/auth.service';
 import { NotificationService } from 'src/app/services/notification.service';
-import Swal from 'sweetalert2';
-
 
 @Component({
   selector: 'app-login',
@@ -21,7 +19,6 @@ export class LoginComponent {
     if (this.firstName && this.pin) {
       this.authService.login(this.firstName, this.pin).subscribe({
         next: (result) => {
-          //Swal.fire('Success', 'Login Successful', 'success');
           this.notificationService.showSuccess('Login successful', 'Success');
           this.router.navigate(['/user-list']);
         },
