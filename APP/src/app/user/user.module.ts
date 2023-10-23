@@ -9,6 +9,7 @@ import { DemoMaterialModule } from '../demo-material-module';
 import { AddEditUserComponent } from './add-edit-user/add-edit-user.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserRoutes } from './user.routing';
+import { AuthGuard } from '../authentication/auth/auth.guard';
 
 
 
@@ -23,10 +24,10 @@ import { UserRoutes } from './user.routing';
     CdkTableModule,
     DemoMaterialModule,
   ],
-  providers: [],
+  providers: [AuthGuard],
   declarations: [
     AddEditUserComponent,
-    UserListComponent   
+    UserListComponent  
   ]
 })
 export class UserModule { }

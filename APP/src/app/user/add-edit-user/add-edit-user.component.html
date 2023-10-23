@@ -1,1 +1,48 @@
-<p>add-edit-user works!</p>
+<div class="spinner-container" *ngIf="isLoading">
+    <mat-spinner></mat-spinner>
+</div>
+<div fxLayout="row">
+    <div fxFlex.gt-sm="100%">
+        <mat-card>
+            <mat-card-content>
+                <div class="card-header">
+                    <mat-card-title>{{title}}</mat-card-title>
+                    <mat-card-subtitle>
+                        <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+                            <!-- Input fields for user details -->
+                            <mat-form-field>
+                                <input matInput formControlName="firstName" placeholder="First Name">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput formControlName="lastName" placeholder="Last Name">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput formControlName="pin" placeholder="Pin">
+                            </mat-form-field>
+                            <mat-checkbox formControlName="isSuper">Super</mat-checkbox>
+                            &nbsp;
+                            <mat-checkbox formControlName="isActive" *ngIf="isEditMode">Active</mat-checkbox>
+                            <!-- Submit button -->
+                            <div fxLayout="row" fxLayoutAlign="end center">
+                                <button mat-raised-button color="warn" [routerLink]="['/user-list']">Cancel</button>&nbsp;
+                                <button mat-raised-button color="primary" type="submit" *ngIf="!isEditMode">Save</button>
+                                <button mat-raised-button color="primary" type="submit" *ngIf="isEditMode">Update</button>
+                            </div>
+
+                            <!-- <div fxLayout="row" fxLayoutAlign="end center">
+                                <button mat-raised-button color="warn" [routerLink]="['/user-list']">Back</button>&nbsp;
+                                <ng-container *ngIf="isEditMode; else saveButton">
+                                    <button mat-raised-button color="primary" type="submit">Update</button>
+                                </ng-container>
+                                <ng-template #saveButton>
+                                    <button mat-raised-button color="primary" type="submit">Save</button>
+                                </ng-template>
+                            </div> -->
+                            
+                        </form>
+                    </mat-card-subtitle>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

@@ -8,8 +8,20 @@ namespace CrownPoly.Core.Entities
 {
     public class User
     {
-        public int Id { get; set; }
-        public string UserName { get; set; }
-        public int Pin { get; set; }
+        public int UserID { get; set; }
+        public string FirstName { get; set; } =string.Empty;
+        public string LastName { get; set; } = string.Empty;
+        public string Pin { get; set; } = string.Empty;
+        public bool IsSuper { get; set; }
+        public bool IsActive { get; set; }
     }
+
+    public class UserLogin
+    {
+        public string FirstName { get; set; } = string.Empty;
+        public string LastName { get; set; } = string.Empty;
+        public string Pin { get; set; }=string.Empty;
+    }
+
+
 }

@@ -9,6 +9,6 @@ namespace CrownPoly.Application.Interfaces
 {
     public interface IUserRepository : IGenericRepository<User>
     {
-       
+        Task<User> Login(User entity);
     }
 }

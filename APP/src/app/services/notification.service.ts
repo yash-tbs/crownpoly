@@ -8,11 +8,11 @@ export class NotificationService {
 
   constructor(private toastr: ToastrService) { }
   showSuccess(message:any, title:any) {
-    this.toastr.success(message, title, { positionClass: 'toast-top-center' })
+    this.toastr.success(message, title, { positionClass: 'toast-top-right' })
   }
 
   showError(message:any, title:any) {
-    this.toastr.error(message, title, { positionClass: 'toast-top-center' })
+    this.toastr.error(message, title, { positionClass: 'toast-top-right' })
   }
 
   showInfo(message:any, title:any) {
@@ -20,6 +20,6 @@ export class NotificationService {
   }
 
   showWarning(message:any, title:any) {
-    this.toastr.warning(message, title, { positionClass: 'toast-top-center'})
+    this.toastr.warning(message, title, { positionClass: 'toast-top-right'})
   }
 }
